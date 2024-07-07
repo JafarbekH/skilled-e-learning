@@ -28,10 +28,11 @@ body {
   margin: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  font-weight: 500;
+  line-height: 26px;
   background-color: #fff;
   background-image: linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
-  color: #222;
+  color: var(--body-text);
 }
 
 img {
@@ -81,11 +82,57 @@ select:-webkit-autofill:focus {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1142px;
+  max-width: 1190px;
   padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* LOGO */
+.logo {
+    display: block;
+    text-decoration: none;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo:active {
+    opacity: 0.6;
+}
+
+.logo__img {
+    flex-shrink: 0;
+    display: block;
+}
+
+
+/* BUTTON */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    padding: 9px 24px 11px;
+    border-radius: 28px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 700;
+    background-color: var(--dark);
+    white-space: nowrap;
+    transition: all 0.375s ease;
+    text-transform: capitalize;
+}
+
+.button:hover {
+    background-color: #666ca3;
+}
+
+.button:active {
+    opacity: 0.6;
 }
 
 
@@ -93,6 +140,27 @@ select:-webkit-autofill:focus {
 .main-content {
   flex-grow: 1;
 }
+
+
+/* SITE HEADER */
+.site-header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.site-header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header__logo {
+    margin-right: 32px;
+}
+
+
+
+
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -102,4 +170,32 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .site-header {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+    .logo__img {
+        width: 114px;
+        height:28px;
+    }
 }
